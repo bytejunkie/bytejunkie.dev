@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="generator" content="Hugo 0.71.1" />
+    
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Cloud Platform Engineering, or something approaching it.</title>
+
+<meta name="description" content="A blog about cloud based platform engineering, whatever that is." />
+
+
+<link rel="stylesheet" href="http://example.org/css/main.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/src/css/lightgallery.css">
+
+
+
+<meta property="og:title" content="Cloud Platform Engineering, or something approaching it." />
+<meta property="og:description" content="A blog about cloud based platform engineering, whatever that is." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://example.org/" />
+<meta property="og:updated_time" content="2020-05-26T20:43:14+01:00" />
+<meta itemprop="name" content="Cloud Platform Engineering, or something approaching it.">
+<meta itemprop="description" content="A blog about cloud based platform engineering, whatever that is."><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cloud Platform Engineering, or something approaching it."/>
+<meta name="twitter:description" content="A blog about cloud based platform engineering, whatever that is."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <div class="header-placeholder"></div>
+    
+    <header class="header">
+        <div class="wrapper">
+    <div id="sidebar-toggle">TOC</div>
+    <a class="site-title" href="http://example.org/">Bytejunkie</a>
+    <nav class="site-nav">
+        
+    </nav>
+</div>
+    </header>
+
+    
+    <div class="page-content">
+        <div class="wrapper">
+            
+            <div class="col-main">
+                <div class="home">
+    <a class="rss-link" href="http://example.org/index.xml">RSS</a>
+    <a class="rss-link" href="http://example.org/sitemap.xml">SITEMAP</a>
+    <h1 class="page-heading">Articles</h1>
+    
+    <ul class="post-list">
+        
+        
+        
+        <li>
+            <h2><a href="http://example.org/post/markdown-cheatsheet/">Markdown Cheatsheet</a></h2>
+            <div class="post-meta">May 26, 2020</div>
+            <div class="post-excerpt">
+                These are some of the more basic commands I use when I&rsquo;m working with the carpics container.
+# search for an imagedocker search alpine# pull an image from a repodocker image pull ubuntu:latest# view local imagesdocker image ls# build the docker file into an imagedocker image build -t carpics:latest .# run a containerdocker container run -it ubuntu:latest /bin/bashdocker container run -it microsoft/powershell:nanoserver pwsh.
+            </div>
+        </li>
+        
+        <li>
+            <h2><a href="http://example.org/post/container_app_for_car_pics/">Container App for Car Pics</a></h2>
+            <div class="post-meta">May 18, 2020</div>
+            <div class="post-excerpt">
+                In a life some time ago, before my kids arrived, I loved modified cars. So when I started looking into containers and followed the awesome tutorial at Docker Curriculum I saw an opportunity to rework the Flask app for my own re-use when tinkering with container tutorials and as i worked my way into AWS container functions.
+This is the repo if you want to adjust the app and fork/reuse it.
+            </div>
+        </li>
+        
+        <li>
+            <h2><a href="http://example.org/post/aws_exploring_elastic_beanstalk/">AWS: Exploring Elastic Beanstalk</a></h2>
+            <div class="post-meta">May 18, 2020</div>
+            <div class="post-excerpt">
+                After 4 years building Service Fabric platforms, Containers have been noise that I&rsquo;ve heard, but not really understood. Which means they were the first thing to dabble in when I found some free time in lockdown.
+I started out with the excellent Docker Deep Dive book by Nigel Poulton though I found it on offer at LeanPub.
+I&rsquo;m probably still only half of the way through this book, but decided it was time to try out some of the knowledge.
+            </div>
+        </li>
+        
+        <li>
+            <h2><a href="http://example.org/post/authenticating_with_a_service_principal/">Authenticating With a Service Principal</a></h2>
+            <div class="post-meta">Nov 12, 2019</div>
+            <div class="post-excerpt">
+                It turns out that in Azure at least, not everything works first time. So for those times when you absolutely positively dont beloeve that your service principal is working, here is how to login with that resource.
+$azureAplicationId =&#34;Azure AD Application Id&#34; $azureTenantId= &#34;Your Tenant Id&#34; $azurePassword = ConvertTo-SecureString &#34;strong password&#34; -AsPlainText -Force $psCred = New-Object System.Management.Automation.PSCredential($azureAplicationId , $azurePassword) Add-AzureRmAccount -Credential $psCred -TenantId $azureTenantId -ServicePrincipa 
+            </div>
+        </li>
+        
+        <li>
+            <h2><a href="http://example.org/post/helloworld/">Hello World</a></h2>
+            <div class="post-meta">Nov 12, 2019</div>
+            <div class="post-excerpt">
+                Because every blog needs a Hello World page.
+            </div>
+        </li>
+        
+    </ul>
+    
+    <div class="pagination">
+        
+        <span class="page_number ">1 of 1</span>
+        
+    </div>
+</div>
+            </div>
+            
+            <div class="col-second">
+                <div class="col-box col-box-author">
+    <img class="avatar" src="/bytejunkie.png" alt="Matt Short">
+    <div class="col-box-title name">Matt Short</div>
+    <p></p>
+    <p class="contact">
+    </p>
+</div>
+
+<div class="col-box">
+    <div class="col-box-title">Newest Posts</div>
+    <ul class="post-list">
+        
+        <li>
+            <a href="http://example.org/post/markdown-cheatsheet/" class="post-link">Markdown Cheatsheet</a>
+        </li>
+        
+        <li>
+            <a href="http://example.org/post/container_app_for_car_pics/" class="post-link">Container App for Car Pics</a>
+        </li>
+        
+        <li>
+            <a href="http://example.org/post/aws_exploring_elastic_beanstalk/" class="post-link">AWS: Exploring Elastic Beanstalk</a>
+        </li>
+        
+        <li>
+            <a href="http://example.org/post/authenticating_with_a_service_principal/" class="post-link">Authenticating With a Service Principal</a>
+        </li>
+        
+        <li>
+            <a href="http://example.org/post/helloworld/" class="post-link">Hello World</a>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="col-box post-toc hide">
+    <div class="col-box-title">TOC</div>
+</div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="wrapper">
+    © 2020    <a href="http://example.org/">Matt Short</a>
+</div>
+    </footer>
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.11.0/dist/jquery.min.js"></script>
+
+<script src="/js/easybook.js"></script>
+
+<script src="/js/lazysizes.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery-all.min.js"></script>
+<script src="/js/figure.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>

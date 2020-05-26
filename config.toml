@@ -1,0 +1,9 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Cloud Platform Engineering, or something approaching it."
+theme = "hugo-theme-easybook"
+
+[params]
+    author = "Matt Short"
+    description = "A blog about cloud based platform engineering, whatever that is."
+    avatar = "/bytejunkie.png"
