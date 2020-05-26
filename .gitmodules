@@ -1,0 +1,3 @@
+[submodule "themes/hugo-theme-easybook"]
+	path = themes/hugo-theme-easybook
+	url = https://github.com/Y4er/hugo-theme-easybook.git
