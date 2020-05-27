@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Cloud Platform Engineering, or something approaching it.</title>
-    <link>http://example.org/post/</link>
+    <link>http://bytejunkie.dev/post/</link>
     <description>Recent content in Posts on Cloud Platform Engineering, or something approaching it.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 26 May 2020 20:43:14 +0100</lastBuildDate>
     
-	<atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://bytejunkie.dev/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Markdown Cheatsheet</title>
-      <link>http://example.org/post/markdown-cheatsheet/</link>
+      <link>http://bytejunkie.dev/post/markdown-cheatsheet/</link>
       <pubDate>Tue, 26 May 2020 20:43:14 +0100</pubDate>
       
-      <guid>http://example.org/post/markdown-cheatsheet/</guid>
+      <guid>http://bytejunkie.dev/post/markdown-cheatsheet/</guid>
       <description>These are some of the more basic commands I use when I&amp;rsquo;m working with the carpics container.
 # search for an imagedocker search alpine# pull an image from a repodocker image pull ubuntu:latest# view local imagesdocker image ls# build the docker file into an imagedocker image build -t carpics:latest .# run a containerdocker container run -it ubuntu:latest /bin/bashdocker container run -it microsoft/powershell:nanoserver pwsh.</description>
     </item>
     
     <item>
       <title>Container App for car pics</title>
-      <link>http://example.org/post/container_app_for_car_pics/</link>
+      <link>http://bytejunkie.dev/post/container_app_for_car_pics/</link>
       <pubDate>Mon, 18 May 2020 10:10:36 +0100</pubDate>
       
-      <guid>http://example.org/post/container_app_for_car_pics/</guid>
+      <guid>http://bytejunkie.dev/post/container_app_for_car_pics/</guid>
       <description>In a life some time ago, before my kids arrived, I loved modified cars. So when I started looking into containers and followed the awesome tutorial at Docker Curriculum I saw an opportunity to rework the Flask app for my own re-use when tinkering with container tutorials and as i worked my way into AWS container functions.
 This is the repo if you want to adjust the app and fork/reuse it.</description>
     </item>
     
     <item>
       <title>AWS: exploring Elastic Beanstalk</title>
-      <link>http://example.org/post/aws_exploring_elastic_beanstalk/</link>
+      <link>http://bytejunkie.dev/post/aws_exploring_elastic_beanstalk/</link>
       <pubDate>Mon, 18 May 2020 09:01:32 +0100</pubDate>
       
-      <guid>http://example.org/post/aws_exploring_elastic_beanstalk/</guid>
+      <guid>http://bytejunkie.dev/post/aws_exploring_elastic_beanstalk/</guid>
       <description>After 4 years building Service Fabric platforms, Containers have been noise that I&amp;rsquo;ve heard, but not really understood. Which means they were the first thing to dabble in when I found some free time in lockdown.
 I started out with the excellent Docker Deep Dive book by Nigel Poulton though I found it on offer at LeanPub.
 I&amp;rsquo;m probably still only half of the way through this book, but decided it was time to try out some of the knowledge.</description>
@@ -44,20 +44,20 @@ I&amp;rsquo;m probably still only half of the way through this book, but decided
     
     <item>
       <title>Authenticating with a service principal</title>
-      <link>http://example.org/post/authenticating_with_a_service_principal/</link>
+      <link>http://bytejunkie.dev/post/authenticating_with_a_service_principal/</link>
       <pubDate>Tue, 12 Nov 2019 21:04:06 +0000</pubDate>
       
-      <guid>http://example.org/post/authenticating_with_a_service_principal/</guid>
+      <guid>http://bytejunkie.dev/post/authenticating_with_a_service_principal/</guid>
       <description>It turns out that in Azure at least, not everything works first time. So for those times when you absolutely positively dont beloeve that your service principal is working, here is how to login with that resource.
 $azureAplicationId =&amp;#34;Azure AD Application Id&amp;#34; $azureTenantId= &amp;#34;Your Tenant Id&amp;#34; $azurePassword = ConvertTo-SecureString &amp;#34;strong password&amp;#34; -AsPlainText -Force $psCred = New-Object System.Management.Automation.PSCredential($azureAplicationId , $azurePassword) Add-AzureRmAccount -Credential $psCred -TenantId $azureTenantId -ServicePrincipa </description>
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>http://example.org/post/helloworld/</link>
+      <link>http://bytejunkie.dev/post/helloworld/</link>
       <pubDate>Tue, 12 Nov 2019 21:03:46 +0000</pubDate>
       
-      <guid>http://example.org/post/helloworld/</guid>
+      <guid>http://bytejunkie.dev/post/helloworld/</guid>
       <description>Because every blog needs a Hello World page.</description>
     </item>
     

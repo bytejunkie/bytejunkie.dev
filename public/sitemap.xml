@@ -3,46 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>http://bytejunkie.dev/</loc>
     <lastmod>2020-05-26T20:43:14+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/post/markdown-cheatsheet/</loc>
+    <loc>http://bytejunkie.dev/post/markdown-cheatsheet/</loc>
     <lastmod>2020-05-26T20:43:14+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/post/</loc>
+    <loc>http://bytejunkie.dev/post/</loc>
     <lastmod>2020-05-26T20:43:14+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/post/container_app_for_car_pics/</loc>
+    <loc>http://bytejunkie.dev/post/container_app_for_car_pics/</loc>
     <lastmod>2020-05-18T10:10:36+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/post/aws_exploring_elastic_beanstalk/</loc>
+    <loc>http://bytejunkie.dev/post/aws_exploring_elastic_beanstalk/</loc>
     <lastmod>2020-05-18T09:01:32+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/post/authenticating_with_a_service_principal/</loc>
+    <loc>http://bytejunkie.dev/post/authenticating_with_a_service_principal/</loc>
     <lastmod>2019-11-12T21:04:06+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/post/helloworld/</loc>
+    <loc>http://bytejunkie.dev/post/helloworld/</loc>
     <lastmod>2019-11-12T21:03:46+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>http://bytejunkie.dev/categories/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>http://bytejunkie.dev/tags/</loc>
   </url>
   
 </urlset>
