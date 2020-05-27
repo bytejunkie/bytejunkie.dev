@@ -27,4 +27,12 @@ docker container run -it microsoft/powershell:nanoserver pwsh.exe
 docker container ps # to get the container id
 docker stop <id>
 docker rm <id>
+
+#docker compose commands
+#bring a compose app up and detach
+docker-compose up -d
+# stop
+docker-compose stop
+#stop and remove
+docker-compose down
 ```
