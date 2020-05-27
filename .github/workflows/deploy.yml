@@ -1,0 +1,45 @@
+name: Deploy site files
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Copy package to S3 on AWS
+      run: |
+        export AWS_ACCESS_KEY_ID=${{ secrets.aws_access_key_id }}
+        export AWS_SECRET_ACCESS_KEY=${{ secrets.aws_access_key }}
+        export AWS_DEFAULT_REGION="eu-west-2"
+        readonly SOURCE_DIR="public/"
+        readonly SERVICE_NAME="bytejunkie.dev.website"
+        readonly TARGET_DIR=""
+
+        readonly user_id=$(aws sts get-caller-identity | jq -r '.Account')
+        readonly s3_dir="s3://${SERVICE_NAME}/${TARGET_DIR}"
+
+        echo "[Show valuables]"
+        echo "AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION}"
+        echo "user_id: ${user_id}"
+        echo "s3_dir: ${s3_dir}"
+        echo "SOURCE_DIR: ${SOURCE_DIR}"
+        echo "SERVICE_NAME: ${SERVICE_NAME}"
+        echo "TARGET_DIR: ${TARGET_DIR}"
+
+        echo "[Show contents of ${SOURCE_DIR}]"
+
+        ls ${SOURCE_DIR}
+
+        echo "[Start copying ${SOURCE_DIR} to ${s3_dir}]"
+
+        aws s3 cp ${SOURCE_DIR} ${s3_dir} --recursive
+
+        echo "Complete!!"
