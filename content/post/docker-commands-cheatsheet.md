@@ -1,5 +1,5 @@
 ---
-title: "Markdown Cheatsheet"
+title: "Docker Commands Cheatsheet"
 date: 2020-05-26T20:43:14+01:00
 draft: true
 ---
@@ -35,4 +35,16 @@ docker-compose up -d
 docker-compose stop
 #stop and remove
 docker-compose down
+
+#docker stock commands
+docker stack deploy <docker-stack.yml> <stackname>
+
+# lists all stacks
+docker stack ls
+
+# info on a stack 
+docker stack ps <stackname>
+
+# remove a stack
+docker stack rm
 ```
