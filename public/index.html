@@ -15,7 +15,7 @@
 <meta name="description" content="A blog about cloud based platform engineering, whatever that is." />
 
 
-<link rel="stylesheet" href="http://bytejunkie.dev/css/main.css">
+<link rel="stylesheet" href="https://www.bytejunkie.dev/css/main.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/src/css/lightgallery.css">
 
@@ -24,8 +24,8 @@
 <meta property="og:title" content="Cloud Platform Engineering, or something approaching it." />
 <meta property="og:description" content="A blog about cloud based platform engineering, whatever that is." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://bytejunkie.dev/" />
-<meta property="og:updated_time" content="2020-05-26T20:43:14+01:00" />
+<meta property="og:url" content="https://www.bytejunkie.dev/" />
+<meta property="og:updated_time" content="2020-06-23T10:07:49+01:00" />
 <meta itemprop="name" content="Cloud Platform Engineering, or something approaching it.">
 <meta itemprop="description" content="A blog about cloud based platform engineering, whatever that is."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Cloud Platform Engineering, or something approaching it."/>
@@ -47,7 +47,7 @@
     <header class="header">
         <div class="wrapper">
     <div id="sidebar-toggle">TOC</div>
-    <a class="site-title" href="http://bytejunkie.dev/">Bytejunkie</a>
+    <a class="site-title" href="https://www.bytejunkie.dev/">Bytejunkie</a>
     <nav class="site-nav">
         
     </nav>
@@ -60,8 +60,8 @@
             
             <div class="col-main">
                 <div class="home">
-    <a class="rss-link" href="http://bytejunkie.dev/index.xml">RSS</a>
-    <a class="rss-link" href="http://bytejunkie.dev/sitemap.xml">SITEMAP</a>
+    <a class="rss-link" href="https://www.bytejunkie.dev/index.xml">RSS</a>
+    <a class="rss-link" href="https://www.bytejunkie.dev/sitemap.xml">SITEMAP</a>
     <h1 class="page-heading">Articles</h1>
     
     <ul class="post-list">
@@ -69,16 +69,32 @@
         
         
         <li>
-            <h2><a href="http://bytejunkie.dev/post/markdown-cheatsheet/">Markdown Cheatsheet</a></h2>
+            <h2><a href="https://www.bytejunkie.dev/post/useful-kubectl-commands/">Useful Kubectl Commands</a></h2>
+            <div class="post-meta">Jun 23, 2020</div>
+            <div class="post-excerpt">
+                Pod Basics # create pod from yaml folder in current dir kubectl apply -f pod.yml # list running pods kubectl get pods # longer form info on pod kubectl describe pods hello-pod # run command against a pod kubectl exec hello-pod ps aux # run terminal in a pod - ctrl+d to exit kubectl exec -it hello-pod sh # delete a pod kubectl delete -f pod.yml Deployment commands # create a deployment kubectl apply -f deploy.
+            </div>
+        </li>
+        
+        <li>
+            <h2><a href="https://www.bytejunkie.dev/post/creating-ec2-instances-swarm/">Creating Ec2 Instances Swarm</a></h2>
+            <div class="post-meta">Jun 02, 2020</div>
+            <div class="post-excerpt">
+                sudo yum -y update sudo yum -y install docker sudo usermod -a -G docker ec2-user sudo chkconfig iptables off sudo service docker start 
+            </div>
+        </li>
+        
+        <li>
+            <h2><a href="https://www.bytejunkie.dev/post/docker-commands-cheatsheet/">Docker Commands Cheatsheet</a></h2>
             <div class="post-meta">May 26, 2020</div>
             <div class="post-excerpt">
-                These are some of the more basic commands I use when I&rsquo;m working with the carpics container.
+                These are some of the more basic commands I will use when I&rsquo;m working with the carpics container.
 # search for an imagedocker search alpine# pull an image from a repodocker image pull ubuntu:latest# view local imagesdocker image ls# build the docker file into an imagedocker image build -t carpics:latest .# run a containerdocker container run -it ubuntu:latest /bin/bashdocker container run -it microsoft/powershell:nanoserver pwsh.
             </div>
         </li>
         
         <li>
-            <h2><a href="http://bytejunkie.dev/post/container_app_for_car_pics/">Container App for Car Pics</a></h2>
+            <h2><a href="https://www.bytejunkie.dev/post/container_app_for_car_pics/">Container App for Car Pics</a></h2>
             <div class="post-meta">May 18, 2020</div>
             <div class="post-excerpt">
                 In a life some time ago, before my kids arrived, I loved modified cars. So when I started looking into containers and followed the awesome tutorial at Docker Curriculum I saw an opportunity to rework the Flask app for my own re-use when tinkering with container tutorials and as i worked my way into AWS container functions.
@@ -87,17 +103,7 @@ This is the repo if you want to adjust the app and fork/reuse it.
         </li>
         
         <li>
-            <h2><a href="http://bytejunkie.dev/post/aws_exploring_elastic_beanstalk/">AWS: Exploring Elastic Beanstalk</a></h2>
-            <div class="post-meta">May 18, 2020</div>
-            <div class="post-excerpt">
-                After 4 years building Service Fabric platforms, Containers have been noise that I&rsquo;ve heard, but not really understood. Which means they were the first thing to dabble in when I found some free time in lockdown.
-I started out with the excellent Docker Deep Dive book by Nigel Poulton though I found it on offer at LeanPub.
-I&rsquo;m probably still only half of the way through this book, but decided it was time to try out some of the knowledge.
-            </div>
-        </li>
-        
-        <li>
-            <h2><a href="http://bytejunkie.dev/post/authenticating_with_a_service_principal/">Authenticating With a Service Principal</a></h2>
+            <h2><a href="https://www.bytejunkie.dev/post/authenticating_with_a_service_principal/">Authenticating With a Service Principal</a></h2>
             <div class="post-meta">Nov 12, 2019</div>
             <div class="post-excerpt">
                 It turns out that in Azure at least, not everything works first time. So for those times when you absolutely positively dont beloeve that your service principal is working, here is how to login with that resource.
@@ -106,7 +112,7 @@ $azureAplicationId =&#34;Azure AD Application Id&#34; $azureTenantId= &#34;Your 
         </li>
         
         <li>
-            <h2><a href="http://bytejunkie.dev/post/helloworld/">Hello World</a></h2>
+            <h2><a href="https://www.bytejunkie.dev/post/helloworld/">Hello World</a></h2>
             <div class="post-meta">Nov 12, 2019</div>
             <div class="post-excerpt">
                 Because every blog needs a Hello World page.
@@ -137,23 +143,27 @@ $azureAplicationId =&#34;Azure AD Application Id&#34; $azureTenantId= &#34;Your 
     <ul class="post-list">
         
         <li>
-            <a href="http://bytejunkie.dev/post/markdown-cheatsheet/" class="post-link">Markdown Cheatsheet</a>
+            <a href="https://www.bytejunkie.dev/post/useful-kubectl-commands/" class="post-link">Useful Kubectl Commands</a>
         </li>
         
         <li>
-            <a href="http://bytejunkie.dev/post/container_app_for_car_pics/" class="post-link">Container App for Car Pics</a>
+            <a href="https://www.bytejunkie.dev/post/creating-ec2-instances-swarm/" class="post-link">Creating Ec2 Instances Swarm</a>
         </li>
         
         <li>
-            <a href="http://bytejunkie.dev/post/aws_exploring_elastic_beanstalk/" class="post-link">AWS: Exploring Elastic Beanstalk</a>
+            <a href="https://www.bytejunkie.dev/post/docker-commands-cheatsheet/" class="post-link">Docker Commands Cheatsheet</a>
         </li>
         
         <li>
-            <a href="http://bytejunkie.dev/post/authenticating_with_a_service_principal/" class="post-link">Authenticating With a Service Principal</a>
+            <a href="https://www.bytejunkie.dev/post/container_app_for_car_pics/" class="post-link">Container App for Car Pics</a>
         </li>
         
         <li>
-            <a href="http://bytejunkie.dev/post/helloworld/" class="post-link">Hello World</a>
+            <a href="https://www.bytejunkie.dev/post/authenticating_with_a_service_principal/" class="post-link">Authenticating With a Service Principal</a>
+        </li>
+        
+        <li>
+            <a href="https://www.bytejunkie.dev/post/helloworld/" class="post-link">Hello World</a>
         </li>
         
     </ul>
@@ -168,7 +178,7 @@ $azureAplicationId =&#34;Azure AD Application Id&#34; $azureTenantId= &#34;Your 
     
     <footer class="footer">
         <div class="wrapper">
-    © 2020    <a href="http://bytejunkie.dev/">Matt Short</a>
+    © 2020    <a href="https://www.bytejunkie.dev/">Matt Short</a>
 </div>
     </footer>
     

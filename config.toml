@@ -1,4 +1,4 @@
-baseURL = "http://bytejunkie.dev/"
+baseURL = "https://www.bytejunkie.dev/"
 languageCode = "en-us"
 title = "Cloud Platform Engineering, or something approaching it."
 theme = "hugo-theme-easybook"
