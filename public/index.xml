@@ -50,6 +50,17 @@ This is the repo if you want to adjust the app and fork/reuse it.</description>
     </item>
     
     <item>
+      <title>AWS: exploring Elastic Beanstalk</title>
+      <link>https://www.bytejunkie.dev/post/aws_exploring_elastic_beanstalk/</link>
+      <pubDate>Mon, 18 May 2020 09:01:32 +0100</pubDate>
+      
+      <guid>https://www.bytejunkie.dev/post/aws_exploring_elastic_beanstalk/</guid>
+      <description>After 4 years building Service Fabric platforms, Containers have been noise that I&amp;rsquo;ve heard, but not really understood. Which means they were the first thing to dabble in when I found some free time in lockdown.
+I started out with the excellent Docker Deep Dive book by Nigel Poulton though I found it on offer at LeanPub.
+I&amp;rsquo;m probably still only half of the way through this book, but decided it was time to try out some of the knowledge.</description>
+    </item>
+    
+    <item>
       <title>Authenticating with a service principal</title>
       <link>https://www.bytejunkie.dev/post/authenticating_with_a_service_principal/</link>
       <pubDate>Tue, 12 Nov 2019 21:04:06 +0000</pubDate>
