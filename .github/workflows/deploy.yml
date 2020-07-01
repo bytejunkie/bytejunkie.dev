@@ -20,7 +20,7 @@ jobs:
         export AWS_SECRET_ACCESS_KEY=${{ secrets.aws_access_key }}
         export AWS_DEFAULT_REGION="eu-west-2"
         readonly SOURCE_DIR="public/"
-        readonly SERVICE_NAME="bytejunkie.dev.website"
+        readonly SERVICE_NAME="www.bytejunkie.dev"
         readonly TARGET_DIR=""
 
         readonly user_id=$(aws sts get-caller-identity | jq -r '.Account')
