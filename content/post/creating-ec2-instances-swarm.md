@@ -1,7 +1,7 @@
 ---
 title: "Creating Ec2 Instances Swarm"
 date: 2020-06-02T15:25:08+01:00
-draft: true
+draft: false
 ---
 
 
