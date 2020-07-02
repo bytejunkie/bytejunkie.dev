@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>How I Built This Blog - Cloud Platform Engineering, or something approaching it.</title>
+
+<meta name="description" content="This blog is built using Hugo, a static site generator written in Go. The pattern is simple, code a site with templates and content locally, then build static pages and files to upload to a host of your choice. It makes for an extremely lightweight site, without the complexity of something like Wordpress. It also comes with similar bolt ons to the bigger site engines, which makes it a powerful choice." />
+
+
+<link rel="stylesheet" href="https://www.bytejunkie.dev/css/main.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/src/css/lightgallery.css">
+
+
+
+<meta property="og:title" content="How I Built This Blog" />
+<meta property="og:description" content="This blog is built using Hugo, a static site generator written in Go. The pattern is simple, code a site with templates and content locally, then build static pages and files to upload to a host of your choice. It makes for an extremely lightweight site, without the complexity of something like Wordpress. It also comes with similar bolt ons to the bigger site engines, which makes it a powerful choice." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.bytejunkie.dev/post/how-i-built-this-blog/" />
+<meta property="article:published_time" content="2020-07-01T21:40:40+01:00" />
+<meta property="article:modified_time" content="2020-07-01T21:40:40+01:00" />
+<meta itemprop="name" content="How I Built This Blog">
+<meta itemprop="description" content="This blog is built using Hugo, a static site generator written in Go. The pattern is simple, code a site with templates and content locally, then build static pages and files to upload to a host of your choice. It makes for an extremely lightweight site, without the complexity of something like Wordpress. It also comes with similar bolt ons to the bigger site engines, which makes it a powerful choice.">
+<meta itemprop="datePublished" content="2020-07-01T21:40:40&#43;01:00" />
+<meta itemprop="dateModified" content="2020-07-01T21:40:40&#43;01:00" />
+<meta itemprop="wordCount" content="549">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How I Built This Blog"/>
+<meta name="twitter:description" content="This blog is built using Hugo, a static site generator written in Go. The pattern is simple, code a site with templates and content locally, then build static pages and files to upload to a host of your choice. It makes for an extremely lightweight site, without the complexity of something like Wordpress. It also comes with similar bolt ons to the bigger site engines, which makes it a powerful choice."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <div class="header-placeholder"></div>
+    
+    <header class="header">
+        <div class="wrapper">
+    <div id="sidebar-toggle">TOC</div>
+    <a class="site-title" href="https://www.bytejunkie.dev/">Bytejunkie</a>
+    <nav class="site-nav">
+        
+    </nav>
+</div>
+    </header>
+
+    
+    <div class="page-content">
+        <div class="wrapper">
+            
+            <div class="col-main">
+                <div class="post">
+    
+    <header class="post-header">
+        <h1 class="post-title">How I Built This Blog</h1>
+        <p class="post-meta">Jul 01, 2020</p>
+    </header>
+    <article class="post-content">
+        
+        
+        
+        
+        
+        
+        <p><img src="/images/blog-hosting.png" alt="image of blog pipeline"></p>
+<p>This blog is built using Hugo, a static site generator written in Go. The pattern is simple, code a site with templates and content locally, then build static pages and files to upload to a host of your choice. It makes for an extremely lightweight site, without the complexity of something like Wordpress. It also comes with similar bolt ons to the bigger site engines, which makes it a powerful choice.</p>
+<p>Its really simple to make your site locally, then upload it to your chosen hosting. I chose a more convoluted path, to try and test a few technologies that are new to me out. Once I&rsquo;ve generated the static pages locally on my laptop, the whole source folder including the Hugo artifacts as well as the generated site is pushed to Github. This push to master, triggers a Github action which copies content to an AWS S3 bucket.</p>
+<p>When a user requests a page, the domain registrars name servers (in this case Google Domains) point at an AWS Cloud Front deployment, which fronts the static pages. N.B. if you&rsquo;re tempted to follow this pattern, be warned that there could be a 24 hour caching period employed by Cloudfront.</p>
+<p>Most of this is already covered on the web, so I won&rsquo;t repeat, but I will link to the articles I followed for anyone who finds this page.</p>
+<ol>
+<li>
+<p>Getting started with Hugo
+<a href="https://gohugo.io/getting-started/quick-start/">Hugo Quick Start</a></p>
+</li>
+<li>
+<p>Github actions
+Github comes with some actions already coded up for you, but in this instance, the S3 one i found didn&rsquo;t work. So I took the code and ran it as my own custom action. It looks like this:</p>
+</li>
+</ol>
+<pre><code>name: Deploy site files
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Copy package to S3 on AWS
+      run: |
+        export AWS_ACCESS_KEY_ID=${{ secrets.aws_access_key_id }}
+        export AWS_SECRET_ACCESS_KEY=${{ secrets.aws_access_key }}
+        export AWS_DEFAULT_REGION=&quot;eu-west-2&quot;
+        readonly SOURCE_DIR=&quot;public/&quot;
+        readonly SERVICE_NAME=&quot;&lt;bucket-name&gt;&quot;
+        readonly TARGET_DIR=&quot;&quot;
+
+        readonly user_id=$(aws sts get-caller-identity | jq -r '.Account')
+        readonly s3_dir=&quot;s3://${SERVICE_NAME}/${TARGET_DIR}&quot;
+
+        echo &quot;[Show valuables]&quot;
+        echo &quot;AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION}&quot;
+        echo &quot;user_id: ${user_id}&quot;
+        echo &quot;s3_dir: ${s3_dir}&quot;
+        echo &quot;SOURCE_DIR: ${SOURCE_DIR}&quot;
+        echo &quot;SERVICE_NAME: ${SERVICE_NAME}&quot;
+        echo &quot;TARGET_DIR: ${TARGET_DIR}&quot;
+
+        echo &quot;[Show contents of ${SOURCE_DIR}]&quot;
+
+        ls ${SOURCE_DIR}
+
+        echo &quot;[Start copying ${SOURCE_DIR} to ${s3_dir}]&quot;
+
+        aws s3 cp ${SOURCE_DIR} ${s3_dir} --recursive
+
+        echo &quot;Complete!!&quot;
+
+</code></pre><p>You really only need to worry about adding variables for</p>
+<ul>
+<li>secrets.aws_access_key_id</li>
+<li>secrets.aws_access_key
+and to populate <!-- raw HTML omitted --> in the code above. Obviously the bucket needs to exist in advance.</li>
+</ul>
+<p>#TODO: I really should have created my own action with the revised code above, for other people to use. One for another blog post.</p>
+<ol start="3">
+<li>The final part of this puzzle, is to wire it all together. I followed this article, which is excellent.
+<a href="https://dev.to/razcodes/how-to-host-a-static-website-with-aws-s3-and-ssl-using-cloudfront-3e37">S3 website and SSL</a>
+A couple of caveats:</li>
+</ol>
+<ul>
+<li>the article uses Route53 and I used Google Domains. After configuring the Cloudfront Distribution, grab the url for it and direct the www record to that (in google domains DNS). Also, add a synthetic record to bounce the naked domain to www.</li>
+<li>From reading various posts, Cloudfront can take some time to see your SSL cert. It might or might not have to be located in one of the US regions, although I waited 24 hours and it appeared to not matter. Plenty of blog posts say it helped them, with no concensus on the region.</li>
+</ul>
+
+    </article>
+
+    
+    <div class="prevnext">
+        
+
+
+
+<ul class="prevnext">
+    
+    <li>上一篇：
+        <a href="https://www.bytejunkie.dev/post/useful-kubectl-commands/">
+            Useful Kubectl Commands
+        </a>
+    </li>
+    
+    
+</ul>
+
+    </div>
+    
+    <div class="post-comments">
+        
+  
+  
+
+  
+
+    </div>
+</div>
+            </div>
+            
+            <div class="col-second">
+                <div class="col-box col-box-author">
+    <img class="avatar" src="/bytejunkie.png" alt="Matt Short">
+    <div class="col-box-title name">Matt Short</div>
+    <p></p>
+    <p class="contact">
+    </p>
+</div>
+
+<div class="col-box">
+    <div class="col-box-title">Newest Posts</div>
+    <ul class="post-list">
+        
+        <li>
+            <a href="https://www.bytejunkie.dev/post/how-i-built-this-blog/" class="post-link">How I Built This Blog</a>
+        </li>
+        
+        <li>
+            <a href="https://www.bytejunkie.dev/post/useful-kubectl-commands/" class="post-link">Useful Kubectl Commands</a>
+        </li>
+        
+        <li>
+            <a href="https://www.bytejunkie.dev/post/creating-ec2-instances-swarm/" class="post-link">Creating Ec2 Instances Swarm</a>
+        </li>
+        
+        <li>
+            <a href="https://www.bytejunkie.dev/post/docker-commands-cheatsheet/" class="post-link">Docker Commands Cheatsheet</a>
+        </li>
+        
+        <li>
+            <a href="https://www.bytejunkie.dev/post/container_app_for_car_pics/" class="post-link">Container App for Car Pics</a>
+        </li>
+        
+        <li>
+            <a href="https://www.bytejunkie.dev/post/aws_exploring_elastic_beanstalk/" class="post-link">AWS: Exploring Elastic Beanstalk</a>
+        </li>
+        
+        <li>
+            <a href="https://www.bytejunkie.dev/post/authenticating_with_a_service_principal/" class="post-link">Authenticating With a Service Principal</a>
+        </li>
+        
+        <li>
+            <a href="https://www.bytejunkie.dev/post/helloworld/" class="post-link">Hello World</a>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="col-box post-toc hide">
+    <div class="col-box-title">TOC</div>
+</div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="wrapper">
+    © 2020    <a href="https://www.bytejunkie.dev/">Matt Short</a>
+</div>
+    </footer>
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.11.0/dist/jquery.min.js"></script>
+
+<script src="/js/easybook.js"></script>
+
+<script src="/js/lazysizes.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery-all.min.js"></script>
+<script src="/js/figure.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>

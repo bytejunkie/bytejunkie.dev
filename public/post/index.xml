@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Cloud Platform Engineering, or something approaching it.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Jun 2020 10:07:49 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2020 21:40:40 +0100</lastBuildDate>
     
 	<atom:link href="https://www.bytejunkie.dev/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How I Built This Blog</title>
+      <link>https://www.bytejunkie.dev/post/how-i-built-this-blog/</link>
+      <pubDate>Wed, 01 Jul 2020 21:40:40 +0100</pubDate>
+      
+      <guid>https://www.bytejunkie.dev/post/how-i-built-this-blog/</guid>
+      <description>This blog is built using Hugo, a static site generator written in Go. The pattern is simple, code a site with templates and content locally, then build static pages and files to upload to a host of your choice. It makes for an extremely lightweight site, without the complexity of something like Wordpress. It also comes with similar bolt ons to the bigger site engines, which makes it a powerful choice.</description>
+    </item>
     
     <item>
       <title>Useful Kubectl Commands</title>
