@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta name="generator" content="Hugo 0.71.1" />
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+	<meta name="generator" content="Hugo 0.122.0">
     
 <meta charset="utf-8">
 
@@ -25,11 +24,11 @@
 <meta property="og:description" content="A blog about cloud based platform engineering, whatever that is." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.bytejunkie.dev/" />
-<meta property="og:updated_time" content="2020-07-01T21:40:40+01:00" />
+
 <meta itemprop="name" content="Cloud Platform Engineering, or something approaching it.">
-<meta itemprop="description" content="A blog about cloud based platform engineering, whatever that is."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Cloud Platform Engineering, or something approaching it."/>
+<meta itemprop="description" content="A blog about cloud based platform engineering, whatever that is."><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Cloud Platform Engineering, or something approaching it."/>
 <meta name="twitter:description" content="A blog about cloud based platform engineering, whatever that is."/>
+<meta name="twitter:site" content="@https://twitter.com/bytejunkie"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -44,194 +43,387 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-</head>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.bytejunkie.dev/">Cloud Platform Engineering, or something approaching it.</a>
+    </div>
 
-<body>
-    <div class="header-placeholder"></div>
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+      </ul>
+    </div>
+
     
-    <header class="header">
-        <div class="wrapper">
+
+  </div>
+</nav>
+
+
+
+
+    <div class="wrapper">
     <div id="sidebar-toggle">TOC</div>
     <a class="site-title" href="https://www.bytejunkie.dev/">Bytejunkie</a>
     <nav class="site-nav">
         
     </nav>
 </div>
-    </header>
+    
+  <div role="main" class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
 
+        <div class="posts-list">
+          
+          
+            <article class="post-preview">
+    <a href="https://www.bytejunkie.dev/post/how-i-built-this-blog/">
+        <h2 class="post-title">How I Built This Blog</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on July 1, 2020
+  
+  
+  
+  
     
-    <div class="page-content">
-        <div class="wrapper">
-            
-            <div class="col-main">
-                <div class="home">
-    <a class="rss-link" href="https://www.bytejunkie.dev/index.xml">RSS</a>
-    <a class="rss-link" href="https://www.bytejunkie.dev/sitemap.xml">SITEMAP</a>
-    <h1 class="page-heading">Articles</h1>
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
     
-    <ul class="post-list">
-        
-        
-        
-        <li>
-            <h2><a href="https://www.bytejunkie.dev/post/how-i-built-this-blog/">How I Built This Blog</a></h2>
-            <div class="post-meta">Jul 01, 2020</div>
-            <div class="post-excerpt">
-                This blog is built using Hugo, a static site generator written in Go. The pattern is simple, code a site with templates and content locally, then build static pages and files to upload to a host of your choice. It makes for an extremely lightweight site, without the complexity of something like Wordpress. It also comes with similar bolt ons to the bigger site engines, which makes it a powerful choice.
-            </div>
-        </li>
-        
-        <li>
-            <h2><a href="https://www.bytejunkie.dev/post/useful-kubectl-commands/">Useful Kubectl Commands</a></h2>
-            <div class="post-meta">Jun 23, 2020</div>
-            <div class="post-excerpt">
-                Pod Basics # create pod from yaml folder in current dir kubectl apply -f pod.yml # list running pods kubectl get pods # longer form info on pod kubectl describe pods hello-pod # run command against a pod kubectl exec hello-pod ps aux # run terminal in a pod - ctrl+d to exit kubectl exec -it hello-pod sh # delete a pod kubectl delete -f pod.yml Deployment commands # create a deployment kubectl apply -f deploy.
-            </div>
-        </li>
-        
-        <li>
-            <h2><a href="https://www.bytejunkie.dev/post/creating-ec2-instances-swarm/">Creating Ec2 Instances Swarm</a></h2>
-            <div class="post-meta">Jun 02, 2020</div>
-            <div class="post-excerpt">
-                sudo yum -y update sudo yum -y install docker sudo usermod -a -G docker ec2-user sudo chkconfig iptables off sudo service docker start 
-            </div>
-        </li>
-        
-        <li>
-            <h2><a href="https://www.bytejunkie.dev/post/docker-commands-cheatsheet/">Docker Commands Cheatsheet</a></h2>
-            <div class="post-meta">May 26, 2020</div>
-            <div class="post-excerpt">
-                These are some of the more basic commands I will use when I&rsquo;m working with the carpics container.
-# search for an imagedocker search alpine# pull an image from a repodocker image pull ubuntu:latest# view local imagesdocker image ls# build the docker file into an imagedocker image build -t carpics:latest .# run a containerdocker container run -it ubuntu:latest /bin/bashdocker container run -it microsoft/powershell:nanoserver pwsh.
-            </div>
-        </li>
-        
-        <li>
-            <h2><a href="https://www.bytejunkie.dev/post/container_app_for_car_pics/">Container App for Car Pics</a></h2>
-            <div class="post-meta">May 18, 2020</div>
-            <div class="post-excerpt">
-                In a life some time ago, before my kids arrived, I loved modified cars. So when I started looking into containers and followed the awesome tutorial at Docker Curriculum I saw an opportunity to rework the Flask app for my own re-use when tinkering with container tutorials and as i worked my way into AWS container functions.
-This is the repo if you want to adjust the app and fork/reuse it.
-            </div>
-        </li>
-        
-        <li>
-            <h2><a href="https://www.bytejunkie.dev/post/aws_exploring_elastic_beanstalk/">AWS: Exploring Elastic Beanstalk</a></h2>
-            <div class="post-meta">May 18, 2020</div>
-            <div class="post-excerpt">
-                After 4 years building Service Fabric platforms, Containers have been noise that I&rsquo;ve heard, but not really understood. Which means they were the first thing to dabble in when I found some free time in lockdown.
-I started out with the excellent Docker Deep Dive book by Nigel Poulton though I found it on offer at LeanPub.
-I&rsquo;m probably still only half of the way through this book, but decided it was time to try out some of the knowledge.
-            </div>
-        </li>
-        
-        <li>
-            <h2><a href="https://www.bytejunkie.dev/post/authenticating_with_a_service_principal/">Authenticating With a Service Principal</a></h2>
-            <div class="post-meta">Nov 12, 2019</div>
-            <div class="post-excerpt">
-                It turns out that in Azure at least, not everything works first time. So for those times when you absolutely positively dont beloeve that your service principal is working, here is how to login with that resource.
-$azureAplicationId =&#34;Azure AD Application Id&#34; $azureTenantId= &#34;Your Tenant Id&#34; $azurePassword = ConvertTo-SecureString &#34;strong password&#34; -AsPlainText -Force $psCred = New-Object System.Management.Automation.PSCredential($azureAplicationId , $azurePassword) Add-AzureRmAccount -Credential $psCred -TenantId $azureTenantId -ServicePrincipa 
-            </div>
-        </li>
-        
-        <li>
-            <h2><a href="https://www.bytejunkie.dev/post/helloworld/">Hello World</a></h2>
-            <div class="post-meta">Nov 12, 2019</div>
-            <div class="post-excerpt">
-                Because every blog needs a Hello World page.
-            </div>
-        </li>
-        
-    </ul>
-    
-    <div class="pagination">
-        
-        <span class="page_number ">1 of 1</span>
-        
-    </div>
-</div>
-            </div>
-            
-            <div class="col-second">
-                <div class="col-box col-box-author">
-    <img class="avatar" src="/bytejunkie.png" alt="Matt Short">
-    <div class="col-box-title name">Matt Short</div>
-    <p></p>
-    <p class="contact">
-        <a href="mailto:matt@bytejunkie.dev">Email</a>
-        <a href="http://github.com/bytejunkie">Github</a>
-        <a href="https://twitter.com/bytejunkie">Twitter</a>
+  
+  
+</span>
+
+
     </p>
-</div>
-
-<div class="col-box">
-    <div class="col-box-title">Newest Posts</div>
-    <ul class="post-list">
+    <div class="post-entry">
         
-        <li>
-            <a href="https://www.bytejunkie.dev/post/how-i-built-this-blog/" class="post-link">How I Built This Blog</a>
-        </li>
+        This blog is built using Hugo, a static site generator written in Go. The pattern is simple, code a site with templates and content locally, then build static pages and files to upload to a host of your choice. It makes for an extremely lightweight site, without the complexity of something like Wordpress. It also comes with similar bolt ons to the bigger site engines, which makes it a powerful choice.
+        <a href="https://www.bytejunkie.dev/post/how-i-built-this-blog/" class="post-read-more">[Read More]</a>
         
-        <li>
-            <a href="https://www.bytejunkie.dev/post/useful-kubectl-commands/" class="post-link">Useful Kubectl Commands</a>
-        </li>
-        
-        <li>
-            <a href="https://www.bytejunkie.dev/post/creating-ec2-instances-swarm/" class="post-link">Creating Ec2 Instances Swarm</a>
-        </li>
-        
-        <li>
-            <a href="https://www.bytejunkie.dev/post/docker-commands-cheatsheet/" class="post-link">Docker Commands Cheatsheet</a>
-        </li>
-        
-        <li>
-            <a href="https://www.bytejunkie.dev/post/container_app_for_car_pics/" class="post-link">Container App for Car Pics</a>
-        </li>
-        
-        <li>
-            <a href="https://www.bytejunkie.dev/post/aws_exploring_elastic_beanstalk/" class="post-link">AWS: Exploring Elastic Beanstalk</a>
-        </li>
-        
-        <li>
-            <a href="https://www.bytejunkie.dev/post/authenticating_with_a_service_principal/" class="post-link">Authenticating With a Service Principal</a>
-        </li>
-        
-        <li>
-            <a href="https://www.bytejunkie.dev/post/helloworld/" class="post-link">Hello World</a>
-        </li>
-        
-    </ul>
-</div>
-
-<div class="col-box post-toc hide">
-    <div class="col-box-title">TOC</div>
-</div>
-            </div>
-        </div>
     </div>
+
     
-    <footer class="footer">
-        <div class="wrapper">
-    © 2020    <a href="https://www.bytejunkie.dev/">Matt Short</a>
+
+</article>
+          
+            <article class="post-preview">
+    <a href="https://www.bytejunkie.dev/post/useful-kubectl-commands/">
+        <h2 class="post-title">Useful Kubectl Commands</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on June 23, 2020
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        Pod Basics # create pod from yaml folder in current dir kubectl apply -f pod.yml # list running pods kubectl get pods # longer form info on pod kubectl describe pods hello-pod # run command against a pod kubectl exec hello-pod ps aux # run terminal in a pod - ctrl+d to exit kubectl exec -it hello-pod sh # delete a pod kubectl delete -f pod.yml Deployment commands # create a deployment kubectl apply -f deploy.
+        <a href="https://www.bytejunkie.dev/post/useful-kubectl-commands/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="https://www.bytejunkie.dev/post/creating-ec2-instances-swarm/">
+        <h2 class="post-title">Creating Ec2 Instances Swarm</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on June 2, 2020
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <pre tabindex="0"><code>sudo yum -y update
+</code></pre><pre tabindex="0"><code>sudo yum -y install docker
+</code></pre><pre tabindex="0"><code>sudo usermod -a -G docker ec2-user
+</code></pre><pre tabindex="0"><code>sudo chkconfig iptables off
+</code></pre><pre tabindex="0"><code>sudo service docker start
+</code></pre>
+        
+    </div>
+
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="https://www.bytejunkie.dev/post/docker-commands-cheatsheet/">
+        <h2 class="post-title">Docker Commands Cheatsheet</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on May 26, 2020
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        These are some of the more basic commands I will use when I&rsquo;m working with the carpics container.
+# search for an image docker search alpine # pull an image from a repo docker image pull ubuntu:latest # view local images docker image ls # build the docker file into an image docker image build -t carpics:latest . # run a container docker container run -it ubuntu:latest /bin/bash docker container run -it microsoft/powershell:nanoserver pwsh.
+        <a href="https://www.bytejunkie.dev/post/docker-commands-cheatsheet/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="https://www.bytejunkie.dev/post/container_app_for_car_pics/">
+        <h2 class="post-title">Container App for car pics</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on May 18, 2020
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        In a life some time ago, before my kids arrived, I loved modified cars. So when I started looking into containers and followed the awesome tutorial at Docker Curriculum I saw an opportunity to rework the Flask app for my own re-use when tinkering with container tutorials and as i worked my way into AWS container functions.
+This is the repo if you want to adjust the app and fork/reuse it.
+        <a href="https://www.bytejunkie.dev/post/container_app_for_car_pics/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="https://www.bytejunkie.dev/post/authenticating_with_a_service_principal/">
+        <h2 class="post-title">Authenticating with a service principal</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on November 12, 2019
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>It turns out that in Azure at least, not everything works first time. So for those times when you absolutely positively dont beloeve that your service principal is working, here is how to login with that resource.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$azureAplicationId =<span style="color:#e6db74">&#34;Azure AD Application Id&#34;</span>
+</span></span><span style="display:flex;"><span>$azureTenantId= <span style="color:#e6db74">&#34;Your Tenant Id&#34;</span>
+</span></span><span style="display:flex;"><span>$azurePassword = ConvertTo-SecureString <span style="color:#e6db74">&#34;strong password&#34;</span> -AsPlainText -Force
+</span></span><span style="display:flex;"><span>$psCred = New-Object System.Management.Automation.PSCredential($azureAplicationId , $azurePassword)
+</span></span><span style="display:flex;"><span>Add-AzureRmAccount -Credential $psCred -TenantId $azureTenantId  -ServicePrincipa
+</span></span></code></pre></div>
+        
+    </div>
+
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="https://www.bytejunkie.dev/post/helloworld/">
+        <h2 class="post-title">Hello World</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on November 12, 2019
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>Because every blog needs a Hello World page.</p>
+
+        
+    </div>
+
+    
+
+</article>
+          
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+
+      
+    <div class="page-meta">
+  
+  
+  
 </div>
-    </footer>
+
+
+  
+<footer>
+  <div class="container">
     
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://www.bytejunkie.dev/">Cloud Platform Engineering, or something approaching it.</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.122.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="https://www.bytejunkie.dev/js/main.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://www.bytejunkie.dev/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
     
-<script src="https://cdn.jsdelivr.net/npm/jquery@1.11.0/dist/jquery.min.js"></script>
-
-<script src="/js/easybook.js"></script>
-
-<script src="/js/lazysizes.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery-all.min.js"></script>
-<script src="/js/figure.js"></script>
-
-
-
-
-
-
-
-</body>
-
+  </body>
 </html>
+
