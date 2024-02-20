@@ -1,7 +1,9 @@
 baseURL = "https://www.bytejunkie.dev/"
 languageCode = "en-us"
 title = "Cloud Platform Engineering, or something approaching it."
-theme = "hugo-theme-easybook"
+
+[[module.imports]]
+  path = "github.com/halogenica/beautifulhugo"
 
 [params]
     author = "Matt Short"
