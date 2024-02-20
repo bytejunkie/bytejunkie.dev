@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Cloud Platform Engineering, or something approaching it.</title>
+    <link>https://www.bytejunkie.dev/post/</link>
+    <description>Recent content in Posts on Cloud Platform Engineering, or something approaching it.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Jul 2020 21:40:40 +0100</lastBuildDate>
+    <atom:link href="https://www.bytejunkie.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Built This Blog</title>
+      <link>https://www.bytejunkie.dev/post/how-i-built-this-blog/</link>
+      <pubDate>Wed, 01 Jul 2020 21:40:40 +0100</pubDate>
+      <guid>https://www.bytejunkie.dev/post/how-i-built-this-blog/</guid>
+      <description>This blog is built using Hugo, a static site generator written in Go. The pattern is simple, code a site with templates and content locally, then build static pages and files to upload to a host of your choice. It makes for an extremely lightweight site, without the complexity of something like Wordpress. It also comes with similar bolt ons to the bigger site engines, which makes it a powerful choice.</description>
+    </item>
+    <item>
+      <title>Useful Kubectl Commands</title>
+      <link>https://www.bytejunkie.dev/post/useful-kubectl-commands/</link>
+      <pubDate>Tue, 23 Jun 2020 10:07:49 +0100</pubDate>
+      <guid>https://www.bytejunkie.dev/post/useful-kubectl-commands/</guid>
+      <description>Pod Basics # create pod from yaml folder in current dir kubectl apply -f pod.yml # list running pods kubectl get pods # longer form info on pod kubectl describe pods hello-pod # run command against a pod kubectl exec hello-pod ps aux # run terminal in a pod - ctrl+d to exit kubectl exec -it hello-pod sh # delete a pod kubectl delete -f pod.yml Deployment commands # create a deployment kubectl apply -f deploy.</description>
+    </item>
+    <item>
+      <title>Creating Ec2 Instances Swarm</title>
+      <link>https://www.bytejunkie.dev/post/creating-ec2-instances-swarm/</link>
+      <pubDate>Tue, 02 Jun 2020 15:25:08 +0100</pubDate>
+      <guid>https://www.bytejunkie.dev/post/creating-ec2-instances-swarm/</guid>
+      <description>sudo yum -y update sudo yum -y install docker sudo usermod -a -G docker ec2-user sudo chkconfig iptables off sudo service docker start </description>
+    </item>
+    <item>
+      <title>Docker Commands Cheatsheet</title>
+      <link>https://www.bytejunkie.dev/post/docker-commands-cheatsheet/</link>
+      <pubDate>Tue, 26 May 2020 20:43:14 +0100</pubDate>
+      <guid>https://www.bytejunkie.dev/post/docker-commands-cheatsheet/</guid>
+      <description>These are some of the more basic commands I will use when I&amp;rsquo;m working with the carpics container.&#xA;# search for an image docker search alpine # pull an image from a repo docker image pull ubuntu:latest # view local images docker image ls # build the docker file into an image docker image build -t carpics:latest . # run a container docker container run -it ubuntu:latest /bin/bash docker container run -it microsoft/powershell:nanoserver pwsh.</description>
+    </item>
+    <item>
+      <title>Container App for car pics</title>
+      <link>https://www.bytejunkie.dev/post/container_app_for_car_pics/</link>
+      <pubDate>Mon, 18 May 2020 10:10:36 +0100</pubDate>
+      <guid>https://www.bytejunkie.dev/post/container_app_for_car_pics/</guid>
+      <description>In a life some time ago, before my kids arrived, I loved modified cars. So when I started looking into containers and followed the awesome tutorial at Docker Curriculum I saw an opportunity to rework the Flask app for my own re-use when tinkering with container tutorials and as i worked my way into AWS container functions.&#xA;This is the repo if you want to adjust the app and fork/reuse it.</description>
+    </item>
+    <item>
+      <title>Authenticating with a service principal</title>
+      <link>https://www.bytejunkie.dev/post/authenticating_with_a_service_principal/</link>
+      <pubDate>Tue, 12 Nov 2019 21:04:06 +0000</pubDate>
+      <guid>https://www.bytejunkie.dev/post/authenticating_with_a_service_principal/</guid>
+      <description>It turns out that in Azure at least, not everything works first time. So for those times when you absolutely positively dont beloeve that your service principal is working, here is how to login with that resource.&#xA;$azureAplicationId =&amp;#34;Azure AD Application Id&amp;#34; $azureTenantId= &amp;#34;Your Tenant Id&amp;#34; $azurePassword = ConvertTo-SecureString &amp;#34;strong password&amp;#34; -AsPlainText -Force $psCred = New-Object System.Management.Automation.PSCredential($azureAplicationId , $azurePassword) Add-AzureRmAccount -Credential $psCred -TenantId $azureTenantId -ServicePrincipa </description>
+    </item>
+    <item>
+      <title>Hello World</title>
+      <link>https://www.bytejunkie.dev/post/helloworld/</link>
+      <pubDate>Tue, 12 Nov 2019 21:03:46 +0000</pubDate>
+      <guid>https://www.bytejunkie.dev/post/helloworld/</guid>
+      <description>Because every blog needs a Hello World page.</description>
+    </item>
+  </channel>
+</rss>
